@@ -17,7 +17,7 @@ Student::Student(string loginId, string password) : QMS(loginId, password) {
     this->loginId = loginId;
     this->password = password;
     ofstream outflie;
-    outflie.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentLogin.txt", ios::app);
+    outflie.open("/Users/muhammadsunaam/Desktop/Project-OOP/Student/studentLogin.txt", ios::app);
     outflie << loginId << endl;
     outflie << password << endl;
     outflie.close();
@@ -25,7 +25,7 @@ Student::Student(string loginId, string password) : QMS(loginId, password) {
 
 void Student::login() {
     ifstream loginFile;
-    loginFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentLogin.txt");
+    loginFile.open("/Users/muhammadsunaam/Desktop/Project-OOP/Student/studentLogin.txt");
     //checking to see if new login id is in file
     cout << "Please enter login Id: ";
     cin >> loginId;
@@ -66,7 +66,7 @@ void Student::login() {
 
 void Student::checkMarks() {
     ifstream marksFile;
-    marksFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentMarks.txt");
+    marksFile.open("/Users/muhammadsunaam/Desktop/Project-OOP/Student/"+loginId+"student.txt");
     string line;
     while(getline(marksFile, line)) {
         cout << line << endl;
