@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: untitled_folder_2
+# Project: Project_1
 # Configurations: Debug
 # =============================================================================
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/cmake-build-debug/
+cmake_ninja_workdir = /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2" -B"/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug"
+  COMMAND = cd "/Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester 2/OOP/project/Project 1/Project-1/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester 2/OOP/project/Project 1/Project-1" -B"/Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester 2/OOP/project/Project 1/Project-1/cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,60 +57,102 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd "/Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester 2/OOP/project/Project 1/Project-1/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled_folder_2
+# Object build statements for EXECUTABLE target Project_1
 
 
 #############################################
-# Order-only phony target for untitled_folder_2
+# Order-only phony target for Project_1
 
-build cmake_object_order_depends_target_untitled_folder_2: phony || CMakeFiles/untitled_folder_2.dir
+build cmake_object_order_depends_target_Project_1: phony || CMakeFiles/Project_1.dir
 
-build CMakeFiles/untitled_folder_2.dir/main.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/main.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/main.cpp.o.d
+build CMakeFiles/Project_1.dir/main.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/main.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
 
-build CMakeFiles/untitled_folder_2.dir/QMS.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/QMS.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/QMS.cpp.o.d
+build CMakeFiles/Project_1.dir/QMS.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/QMS.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/QMS.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
 
-build CMakeFiles/untitled_folder_2.dir/admin.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/admin.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/admin.cpp.o.d
+build CMakeFiles/Project_1.dir/Student.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/Student.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/Student.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
 
-build CMakeFiles/untitled_folder_2.dir/student.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/student.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/student.cpp.o.d
+build CMakeFiles/Project_1.dir/admin.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/admin.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/admin.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/DLD.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/DLD.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/DLD.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/Calculus2.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/Calculus2.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/Calculus2.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/AppliedPhysics.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/AppliedPhysics.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/AppliedPhysics.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/islamiat.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/islamiat.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/islamiat.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/OOP.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/OOP.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/OOP.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/IMT.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/IMT.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/IMT.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
+
+build CMakeFiles/Project_1.dir/Teacher.cpp.o: CXX_COMPILER__Project_1_Debug /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester$ 2/OOP/project/Project$ 1/Project-1/Teacher.cpp || cmake_object_order_depends_target_Project_1
+  DEP_FILE = CMakeFiles/Project_1.dir/Teacher.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
+  OBJECT_DIR = CMakeFiles/Project_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project_1.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled_folder_2
+# Link build statements for EXECUTABLE target Project_1
 
 
 #############################################
-# Link the executable untitled_folder_2
+# Link the executable Project_1
 
-build untitled_folder_2: CXX_EXECUTABLE_LINKER__untitled_folder_2_Debug CMakeFiles/untitled_folder_2.dir/main.cpp.o CMakeFiles/untitled_folder_2.dir/QMS.cpp.o CMakeFiles/untitled_folder_2.dir/admin.cpp.o CMakeFiles/untitled_folder_2.dir/student.cpp.o
+build Project_1: CXX_EXECUTABLE_LINKER__Project_1_Debug CMakeFiles/Project_1.dir/main.cpp.o CMakeFiles/Project_1.dir/QMS.cpp.o CMakeFiles/Project_1.dir/Student.cpp.o CMakeFiles/Project_1.dir/admin.cpp.o CMakeFiles/Project_1.dir/DLD.cpp.o CMakeFiles/Project_1.dir/Calculus2.cpp.o CMakeFiles/Project_1.dir/AppliedPhysics.cpp.o CMakeFiles/Project_1.dir/islamiat.cpp.o CMakeFiles/Project_1.dir/OOP.cpp.o CMakeFiles/Project_1.dir/IMT.cpp.o CMakeFiles/Project_1.dir/Teacher.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project_1.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled_folder_2
-  TARGET_PDB = untitled_folder_2.dbg
+  TARGET_FILE = Project_1
+  TARGET_PDB = Project_1.dbg
 
 # =============================================================================
 # Target aliases.
@@ -121,9 +163,9 @@ build untitled_folder_2: CXX_EXECUTABLE_LINKER__untitled_folder_2_Debug CMakeFil
 # =============================================================================
 
 #############################################
-# Folder: /Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug
+# Folder: /Users/muhammadsunaam/Library/CloudStorage/OneDrive-NationalUniversityofSciences&Technology/Semester 2/OOP/project/Project 1/Project-1/cmake-build-debug
 
-build all: phony untitled_folder_2
+build all: phony Project_1
 
 # =============================================================================
 # Built-in targets

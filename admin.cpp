@@ -1,95 +1,113 @@
 //
-// Created by Muhammad Sunaam on 29/07/2022.
+// Created by Muhammad Sunaam on 04/07/2022.
 //
+
+#include "QMS.h"
 #include "admin.h"
 #include <iostream>
 #include <fstream>
 using namespace std;
 
+Admin::Admin(int loginId, string password) : QMS(loginId,password) {}
 
-Admin::Admin(string id, string pass) : QMS(id, pass) {
-    password = pass;
-    loginId = id;
-    ofstream outfile;
-    outfile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/loginAdmin.txt", ios::app);
-    outfile << loginId << endl;
-    outfile << password << endl;
-    outfile.close();
-}
-
-Admin::Admin() {
-    //empty because admin account/object cannot be created this way
-}
-
-void Admin::login() {
-    ifstream loginFile;
-    loginFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/loginAdmin.txt");
-    //checking to see if new login id is in file
-    cout << "Please enter login Id: ";
-    cin >> loginId;
-    cout << "Please enter password: ";
-    cin >> password;
-    string line;
-    bool loginSuccessful = false;
-    if (loginFile.is_open()){
-        while(getline(loginFile, line)) { //while there is a line in the file
-            if (line.find(loginId) != string::npos) { //if login id is found in file
-                loginFile >> line;
-                if (line.find(password) != string::npos) { //if password is found in file
-                    cout << "Login successful" << endl; //login successful
-                    loginSuccessful = true;
-                }
-                else {
-                    cout << "Password incorrect" << endl; //password incorrect
-                    cin.clear(); cin.ignore(254,'\n');
-                    login();
-                }
+void Admin::checkResult() const {
+    cout << "Enter Login ID of Student: " << endl;
+    int loginID;
+    cin >> loginID;
+    fstream result; // file stream for results
+    result.open("results.txt", ios::in);
+    if (result.is_open()) {
+        while (result.good()) {
+            string line;
+            getline(result, line);
+            if (line.find(to_string(loginID)) != string::npos) { // if loginID is found in results.txt
+                for (int i; i<3; i++) {
+                    getline(result, line);
+                    cout << line << endl;
+                }                                              // print the results of the exam
             }
         }
-        if (!loginSuccessful) {
-            cout << "Login Id not found" << endl; //login id not found
-            cin.clear(); cin.ignore(254,'\n');
-            login();
-        }
-        loginFile.close(); //close file
-    }
-    else {
-        cerr << "File not found" << endl; //file not found
-        return; //exit function
+    } else {
+        cout << "Student not found" << endl;
     }
 }
 
-void Admin::createAccount() {
-    ofstream loginFile; //login file
-    loginFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/login.txt", ios::app); //opening login file in append mode
-    if(loginFile.is_open()) {
-        cout << "Please enter login Id: "; //prompting user to enter login id
-        cin >> loginId; //getting login id from user
-        cout << "\nPlease enter password: "; //prompting user to enter password
-        cin >> password;
-        passwordValidator(password); //validate password
-        loginFile << loginId << endl << password << endl;
-        cout << "Account created" << endl;
-        loginFile.close(); //closing login file
+void Admin::checkExams() const {
+    cout << "Which Subject Exam do you want to take?" << endl;
+    int subject; //will be used to store the subject number
+    cout << "1: Calculus 2" << endl;
+    cout << "2: Applied Physics" << endl;
+    cout << "3: Introduction to Management" << endl;
+    cout << "4: Islamiat" << endl;
+    cout << "5: Object Oriented Programming" << endl;
+    cout << "6: Digital Logic Design" << endl;
+    cin >> subject; //store the subject number
+    while (subject > 7 || subject < 1) {
+        cout << "Invalid subject number" << endl;
+        cout << "Which Subject Exam do you want to take?" << endl;
+        cout << "1: Calculus 2" << endl;
+        cout << "2: Applied Physics" << endl;
+        cout << "3: Introduction to Management" << endl;
+        cout << "4: Islamiat" << endl;
+        cout << "5: Object Oriented Programming" << endl;
+        cout << "6: Digital Logic Design" << endl;
+        cin >> subject;
+    }
+    string subjectName; //will be used to store the subject name
+    fstream exam;
+    if(subject == 1) {
+        exam.open("Calculus 2.txt", ios::in);
+        subjectName = "Calculus 2";
+    } else if(subject == 2) {
+        exam.open("Applied Physics.txt", ios::in);
+        subjectName = "Applied Physics";
+    } else if(subject == 3) {
+        exam.open("Introduction to Management.txt", ios::in);
+        subjectName = "Introduction to Management";
+    } else if(subject == 4) {
+        exam.open("Islamiat.txt", ios::in);
+        subjectName = "Islamiat";
+    } else if(subject == 5) {
+        exam.open("Object Oriented Programming.txt", ios::in);
+        subjectName = "Object Oriented Programming";
+    } else if(subject == 6) {
+        exam.open("Digital Logic Design.txt", ios::in);
+        subjectName = "Digital Logic Design";
     } else {
-        cerr << "File not found" << endl; //file not found
+        cout << "Invalid subject number" << endl;
+    }
+
+    if(!exam){
+        cerr << "Error opening file" << endl;
+        exit(1);
+    }
+    string line;
+    while(getline(exam, line)) {
+        cout << line << endl;
     }
 }
 
-void Admin::checkMarks() {
-    cout << "Please enter login Id: "; //prompting user to enter login id
-    cin >> loginId; //getting login id from user
-    ifstream marks;
-    marks.open(loginId+".txt"); //opening marks file
-    if (marks.is_open()) {
-        string line;
-        while(getline(marks, line)) { //while there is a line in the file
-            cout << line << endl; //printing line
+void Admin::checkLoginDetails(int loginId) const {
+    fstream loginDetails; // file stream for login details
+    loginDetails.open("db.txt", ios::in);
+    if (loginDetails.is_open()) {
+        while (loginDetails.good()) {
+            string line;
+            getline(loginDetails, line);
+            if (line.find(to_string(loginId)) != string::npos) { // if loginId is found in db.txt
+                for (int i; i<3; i++) {
+                    getline(loginDetails, line);
+                    cout << line << endl; //login Id
+                    getline(loginDetails, line);
+                    cout << line << endl; //password
+                }                                              // print the login details
+            }
         }
-        marks.close(); //closing marks file
     } else {
-        cerr << "File not found" << endl; //file not found
+        cout << "Student not found" << endl;
     }
 }
+
+
 
 

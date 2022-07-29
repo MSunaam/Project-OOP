@@ -1,80 +1,27 @@
 //
-// Created by Muhammad Sunaam on 29/07/2022.
+// Created by Muhammad Sunaam on 30/06/2022.
 //
 
-#include "student.h"
+#include "Student.h"
 #include <iostream>
-#include <fstream>
 #include <sstream>
+#include <fstream>
+#include <ctime>
+using namespace std;
 
-Student::Student() {
-    loginId = "";
-    password = "";
-    marks = 0;
+
+Student::Student(int loginID, string password) : QMS(loginID, password) {}
+
+void Student::gradeExam(string name, int marks) {
+    results.open("results.txt", ios::app);
+    results << "Login ID: " << this->getLoginID() << endl;
+    results << "Subject Name: " << name << endl;
+    results << "Marks: " << marks << endl;
+    results.close();
 }
 
-Student::Student(string loginId, string password) : QMS(loginId, password) {
-    this->loginId = loginId;
-    this->password = password;
-    ofstream outflie;
-    outflie.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentLogin.txt", ios::app);
-    outflie << loginId << endl;
-    outflie << password << endl;
-    outflie.close();
-}
+void Student::takeExam() {
 
-void Student::login() {
-    ifstream loginFile;
-    loginFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentLogin.txt");
-    //checking to see if new login id is in file
-    cout << "Please enter login Id: ";
-    cin >> loginId;
-    cout << "Please enter password: ";
-    cin >> password;
-    string line;
-    bool loginSuccessful = false;
-    if (loginFile.is_open()){
-        while(getline(loginFile, line)) { //while there is a line in the file
-            if (line.find(loginId) != string::npos) { //if login id is found in file
-                this->loginId = loginId;
-                loginFile >> line;
-                if (line.find(password) != string::npos) { //if password is found in file
-                    cout << "Login successful" << endl; //login successful
-                    this->password = password;
-                    marks = 0;
-                    loginSuccessful = true;
-                }
-                else {
-                    cout << "Password incorrect" << endl; //password incorrect
-                    cin.clear(); cin.ignore(254,'\n');
-                    login();
-                }
-            }
-        }
-        if (!loginSuccessful) {
-            cout << "Login Id not found" << endl; //login id not found
-            cin.clear(); cin.ignore(254,'\n');
-            login();
-        }
-        loginFile.close(); //close file
-    }
-    else {
-        cerr << "File not found" << endl; //file not found
-        return; //exit function
-    }
-}
-
-void Student::checkMarks() {
-    ifstream marksFile;
-    marksFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/studentMarks.txt");
-    string line;
-    while(getline(marksFile, line)) {
-        cout << line << endl;
-    }
-    marksFile.close();
-}
-
-void Student::takeQuiz() {
     cout << "Which Subject Exam do you want to take?" << endl;
     int subject; //will be used to store the subject number
     cout << "1: Calculus 2" << endl;
@@ -96,36 +43,30 @@ void Student::takeQuiz() {
         cin >> subject;
     }
     string subjectName; //will be used to store the subject name
-    ifstream exam;
-    if (subject == 1) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/Calc.txt", ios::in);
+    fstream exam;
+    if(subject == 1) {
+        exam.open("Calculus 2.txt", ios::in);
         subjectName = "Calculus 2";
-    }
-    else if (subject == 2) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/AP.txt", ios::in);
+    } else if(subject == 2) {
+        exam.open("Applied Physics.txt", ios::in);
         subjectName = "Applied Physics";
-    }
-    else if (subject == 3) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/IMT.txt", ios::in);
+    } else if(subject == 3) {
+        exam.open("Introduction to Management.txt", ios::in);
         subjectName = "Introduction to Management";
-    }
-    else if (subject == 4) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/islamiat.txt", ios::in);
+    } else if(subject == 4) {
+        exam.open("Islamiat.txt", ios::in);
         subjectName = "Islamiat";
-    }
-    else if (subject == 5) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/OOP.txt", ios::in);
+    } else if(subject == 5) {
+        exam.open("Object Oriented Programming.txt", ios::in);
         subjectName = "Object Oriented Programming";
-    }
-    else if (subject == 6) {
-        exam.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Quiz/DLD.txt", ios::in);
+    } else if(subject == 6) {
+        exam.open("Digital Logic Design.txt", ios::in);
         subjectName = "Digital Logic Design";
-    }
-    else {
+    } else {
         cout << "Invalid subject number" << endl;
     }
 
-    if (!exam) {
+    if(!exam){
         cerr << "Error opening file" << endl;
         exit(1);
     }
@@ -133,7 +74,7 @@ void Student::takeQuiz() {
     //get password
 
     string password;
-    getline(exam, password);
+    getline(exam,password);
     cout << "Enter password: " << endl;
     string userPassword;
     cin >> userPassword;
@@ -142,112 +83,105 @@ void Student::takeQuiz() {
         if (userPassword == password) {
             cout << "Password correct" << endl;
             break;
-        }
-        else {
-            cout << "Password incorrect " << temp + 1 << " tries remaining" << endl;
+        } else {
+            cout << "Password incorrect " << temp+1 << "tries remaining" << endl;
             temp++;
             cout << "Enter password: " << endl;
             cin >> userPassword;
         }
     }
-    if (temp == 3) {
+    if(temp == 3) {
         cout << "3 incorrect tries" << endl;
         exit(1);
     }
 
     int timeAllowed;
     int numberOfQuestions;
-    int totalMarks;
     string line;
-    getline(exam, line);
-    timeAllowed = getNumberFromString(line); //get the time allowed from the second line
-    getline(exam, line);
+    getline(exam,line);
     numberOfQuestions = getNumberFromString(line); //get the number of questions from the first line
-    getline(exam, line);
-    totalMarks = getNumberFromString(line); //get the total marks from the third line
-    cout << "Time allowed: " << timeAllowed << endl;
-    cout << "Number of questions: " << numberOfQuestions << endl;
-    cout << "Total marks: " << totalMarks << endl;
+    getline(exam,line);
+    timeAllowed = getNumberFromString(line); //get the time allowed from the second line
 
     //setting time check
 
     time_t startTime = time(0); //get the current time
     time_t currentTime = time(0); //get the current time
 
-    int questionAttempted = 0;
+    while(currentTime - startTime < timeAllowed) {
 
-    while ((currentTime - startTime < timeAllowed) and (questionAttempted < numberOfQuestions)) {
+    currentTime = time(0); //get the current time
 
-        currentTime = time(0); //get the current time
-
-        for (int i = 0; i < numberOfQuestions; i++) {
-            cout << "Question " << i + 1 << ": " << endl;
-            getline(exam, line);
+        for (int i; i < numberOfQuestions; i++) {
+            cout << "Question " << i+1 << ": " << endl;
+            getline(exam,line);
             cout << line << endl;
             cout << "a) ";
-            getline(exam, line);
+            getline(exam,line);
             cout << line << endl;
             cout << "b) ";
-            getline(exam, line);
+            getline(exam,line);
             cout << line << endl;
             cout << "c) ";
-            getline(exam, line);
+            getline(exam,line);
             cout << line << endl;
             cout << "d) ";
-            getline(exam, line);
+            getline(exam,line);
             cout << line << endl;
             char correct_answer;
             exam.get(correct_answer); //get the correct answer from the file
             cout << "Enter Answer: ";
             char user_answer;
             cin >> user_answer;
-            while ((int(user_answer) < 97 || int(user_answer) > 97 + 4) && (int(user_answer) < 65 || int(user_answer) > 65 + 4)) {
+            while((int(user_answer) < 97 || int(user_answer) > 97+4) && (int(user_answer) < 65 || int(user_answer) > 65+4)) {
                 cout << "Invalid answer" << endl;
                 cout << "Enter Answer: ";
                 cin >> user_answer;
             }
-            if (user_answer == correct_answer) {
+            if(user_answer == correct_answer) {
                 cout << "Correct!" << endl;
-                questionAttempted++;
                 marks++;
-            }
-            else {
+            } else {
                 cout << "Wrong!" << endl;
-                questionAttempted++;
             }
         }
 
     }
 
-    if (currentTime - startTime >= timeAllowed) {
+    if(currentTime - startTime >= timeAllowed) {
         cout << "Time up!" << endl;
     }
     exam.close();
 
-    gradeExam();
-
+    gradeExam(subjectName, marks);
 
 }
 
 int Student::getNumberFromString(string s) {
-        stringstream str_strm;
-        str_strm << s; //convert the string s into stringstream
-        string temp_str;
-        int temp_int;
-        while (!str_strm.eof()) {
-            str_strm >> temp_str; //take words into temp_str one by one
-            if (stringstream(temp_str) >> temp_int) { //try to convert string to int
-                return temp_int; //return the int
-            }
-            temp_str = ""; //clear temp string
+    stringstream str_strm;
+    str_strm << s; //convert the string s into stringstream
+    string temp_str;
+    int temp_int;
+    while(!str_strm.eof()) {
+        str_strm >> temp_str; //take words into temp_str one by one
+        if(stringstream(temp_str) >> temp_int) { //try to convert string to int
+            return temp_int; //return the int
         }
+        temp_str = ""; //clear temp string
     }
-
-void Student::gradeExam() {
-    ofstream results;
-    results.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/Student/"+loginId+"student.txt", ios::app);
-    results << "Login ID: " << loginId << endl;
-    results << "Marks: " << marks << endl;
-    results.close();
 }
+
+void Student::checkResult() const {
+    fstream temp = fstream("results.txt", ios::in);
+    if(!temp) {
+        cerr << "Error opening file" << endl;
+        exit(1);
+    }
+    string line;
+    while(getline(temp,line)) {
+        cout << line << endl;
+    }
+}
+
+
 
