@@ -11,7 +11,7 @@ Admin::Admin(string id, string pass) : QMS(id, pass) {
     password = pass;
     loginId = id;
     ofstream outfile;
-    outfile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/loginAdmin.txt", ios::app);
+    outfile.open("/Users/muhammadsunaam/Desktop/Project-OOP/loginAdmin.txt", ios::app);
     outfile << loginId << endl;
     outfile << password << endl;
     outfile.close();
@@ -23,7 +23,7 @@ Admin::Admin() {
 
 void Admin::login() {
     ifstream loginFile;
-    loginFile.open("/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/loginAdmin.txt");
+    loginFile.open("/Users/muhammadsunaam/Desktop/Project-OOP/loginAdmin.txt");
     //checking to see if new login id is in file
     cout << "Please enter login Id: ";
     cin >> loginId;
@@ -65,7 +65,7 @@ void Admin::createAccount() {
     if(loginFile.is_open()) {
         cout << "Please enter login Id: "; //prompting user to enter login id
         cin >> loginId; //getting login id from user
-        cout << "\nPlease enter password: "; //prompting user to enter password
+        cout << "Please enter password: "; //prompting user to enter password
         cin >> password;
         passwordValidator(password); //validate password
         loginFile << loginId << endl << password << endl;
