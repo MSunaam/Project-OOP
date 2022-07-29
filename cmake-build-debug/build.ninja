@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/cmake-build-debug/
+cmake_ninja_workdir = /Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2" -B"/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug"
+  COMMAND = cd /Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/muhammadsunaam/Desktop/Project-OOP -B/Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,60 +57,60 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled_folder_2
+# Object build statements for EXECUTABLE target Project-OOP
 
 
 #############################################
-# Order-only phony target for untitled_folder_2
+# Order-only phony target for Project-OOP
 
-build cmake_object_order_depends_target_untitled_folder_2: phony || CMakeFiles/untitled_folder_2.dir
+build cmake_object_order_depends_target_Project-OOP: phony || CMakeFiles/Project-OOP.dir
 
-build CMakeFiles/untitled_folder_2.dir/main.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/main.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/main.cpp.o.d
+build CMakeFiles/Project-OOP.dir/main.cpp.o: CXX_COMPILER__Project-OOP_Debug /Users/muhammadsunaam/Desktop/Project-OOP/main.cpp || cmake_object_order_depends_target_Project-OOP
+  DEP_FILE = CMakeFiles/Project-OOP.dir/main.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project-OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project-OOP.dir
 
-build CMakeFiles/untitled_folder_2.dir/QMS.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/QMS.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/QMS.cpp.o.d
+build CMakeFiles/Project-OOP.dir/QMS.cpp.o: CXX_COMPILER__Project-OOP_Debug /Users/muhammadsunaam/Desktop/Project-OOP/QMS.cpp || cmake_object_order_depends_target_Project-OOP
+  DEP_FILE = CMakeFiles/Project-OOP.dir/QMS.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project-OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project-OOP.dir
 
-build CMakeFiles/untitled_folder_2.dir/admin.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/admin.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/admin.cpp.o.d
+build CMakeFiles/Project-OOP.dir/admin.cpp.o: CXX_COMPILER__Project-OOP_Debug /Users/muhammadsunaam/Desktop/Project-OOP/admin.cpp || cmake_object_order_depends_target_Project-OOP
+  DEP_FILE = CMakeFiles/Project-OOP.dir/admin.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project-OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project-OOP.dir
 
-build CMakeFiles/untitled_folder_2.dir/student.cpp.o: CXX_COMPILER__untitled_folder_2_Debug /Users/muhammadsunaam/Desktop/PROJECT/untitled$ folder$ 2/student.cpp || cmake_object_order_depends_target_untitled_folder_2
-  DEP_FILE = CMakeFiles/untitled_folder_2.dir/student.cpp.o.d
+build CMakeFiles/Project-OOP.dir/student.cpp.o: CXX_COMPILER__Project-OOP_Debug /Users/muhammadsunaam/Desktop/Project-OOP/student.cpp || cmake_object_order_depends_target_Project-OOP
+  DEP_FILE = CMakeFiles/Project-OOP.dir/student.cpp.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project-OOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/Project-OOP.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled_folder_2
+# Link build statements for EXECUTABLE target Project-OOP
 
 
 #############################################
-# Link the executable untitled_folder_2
+# Link the executable Project-OOP
 
-build untitled_folder_2: CXX_EXECUTABLE_LINKER__untitled_folder_2_Debug CMakeFiles/untitled_folder_2.dir/main.cpp.o CMakeFiles/untitled_folder_2.dir/QMS.cpp.o CMakeFiles/untitled_folder_2.dir/admin.cpp.o CMakeFiles/untitled_folder_2.dir/student.cpp.o
+build Project-OOP: CXX_EXECUTABLE_LINKER__Project-OOP_Debug CMakeFiles/Project-OOP.dir/main.cpp.o CMakeFiles/Project-OOP.dir/QMS.cpp.o CMakeFiles/Project-OOP.dir/admin.cpp.o CMakeFiles/Project-OOP.dir/student.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
-  OBJECT_DIR = CMakeFiles/untitled_folder_2.dir
+  OBJECT_DIR = CMakeFiles/Project-OOP.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled_folder_2
-  TARGET_PDB = untitled_folder_2.dbg
+  TARGET_FILE = Project-OOP
+  TARGET_PDB = Project-OOP.dbg
 
 # =============================================================================
 # Target aliases.
@@ -121,9 +121,9 @@ build untitled_folder_2: CXX_EXECUTABLE_LINKER__untitled_folder_2_Debug CMakeFil
 # =============================================================================
 
 #############################################
-# Folder: /Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug
+# Folder: /Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug
 
-build all: phony untitled_folder_2
+build all: phony Project-OOP
 
 # =============================================================================
 # Built-in targets

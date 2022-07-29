@@ -3,4 +3,4 @@ project(untitled_folder_2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled_folder_2 main.cpp QMS.h QMS.cpp admin.cpp admin.h student.cpp student.h)
+add_executable(Project-OOP main.cpp QMS.h QMS.cpp admin.cpp admin.h student.cpp student.h)

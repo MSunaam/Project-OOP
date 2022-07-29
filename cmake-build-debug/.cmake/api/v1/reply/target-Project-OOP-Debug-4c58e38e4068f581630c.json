@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "untitled_folder_2"
+			"path" : "Project-OOP"
 		}
 	],
 	"backtrace" : 1,
@@ -59,7 +59,7 @@
 			]
 		}
 	],
-	"id" : "untitled_folder_2::@6890427a1f51a3e7e1df",
+	"id" : "Project-OOP::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -75,8 +75,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "untitled_folder_2",
-	"nameOnDisk" : "untitled_folder_2",
+	"name" : "Project-OOP",
+	"nameOnDisk" : "Project-OOP",
 	"paths" : 
 	{
 		"build" : ".",

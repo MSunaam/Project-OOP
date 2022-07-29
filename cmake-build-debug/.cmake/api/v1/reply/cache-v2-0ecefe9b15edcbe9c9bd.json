@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug"
+			"value" : "/Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2"
+			"value" : "/Users/muhammadsunaam/Desktop/Project-OOP"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1087,7 +1087,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2/cmake-build-debug"
+			"value" : "/Users/muhammadsunaam/Desktop/Project-OOP/cmake-build-debug"
 		},
 		{
 			"name" : "untitled_folder_2_IS_TOP_LEVEL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/muhammadsunaam/Desktop/PROJECT/untitled folder 2"
+			"value" : "/Users/muhammadsunaam/Desktop/Project-OOP"
 		}
 	],
 	"kind" : "cache",
