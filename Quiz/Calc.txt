@@ -1,0 +1,10 @@
+WXYZ
+30
+Total Questions : 1
+Total Marks : 1
+Which Numercial Integration Technique is better?
+Simpsons
+midpoint
+both
+none
+c
