@@ -1,25 +1,24 @@
 //
-// Created by Muhammad Sunaam on 30/06/2022.
+// Created by Muhammad Sunaam on 29/07/2022.
 //
 
-#ifndef PROJECT_1_STUDENT_H
-#define PROJECT_1_STUDENT_H
+#ifndef UNTITLED_FOLDER_2_STUDENT_H
+#define UNTITLED_FOLDER_2_STUDENT_H
+#include <string>
 #include "QMS.h"
-#include <fstream>
-#include <vector>
-using namespace std;
 
-class Student: public QMS {
+class Student : public QMS {
 private:
-    fstream results; // file stream for results
-    int marks; // marks of the exam
+    string loginId, password;
+    int marks;
 public:
-    Student(int loginID, string password); // constructor
-    void checkResult() const; // check result
-    void takeExam(); // take exam
-    void gradeExam(string subjectName,int marks); // grade exam
-    int getNumberFromString(string s); // get number from string
-
+    Student(); //default constructor
+    Student(string, string); // constructor
+    void login() override; // function to login
+    void checkMarks(); // function to check marks
+    void takeQuiz(); // function to take quiz
+    int getNumberFromString(string);
+    void gradeExam(string s); // function to grade exam
 };
 
-#endif //PROJECT_1_STUDENT_H
+#endif //UNTITLED_FOLDER_2_STUDENT_H
